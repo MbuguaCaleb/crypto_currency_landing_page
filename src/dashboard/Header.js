@@ -1,8 +1,12 @@
 import { View, Text, StyleSheet } from 'react-native'
+import Alert from './Alert'
+import { useState } from 'react'
 
 export default function Header() {
+  const [alert, setaAlert] = useState(false)
   return (
     <View style={styles.MainHeadingArea}>
+      {alert && <Alert />}
       <View style={styles.SubHeadingOne}>
         <Text style={[styles.LargeFontSize, styles.WhiteText]}>
           Afternoon Jo
